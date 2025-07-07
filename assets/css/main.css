@@ -5218,3 +5218,35 @@ a img {
     max-width: 250px;
   }
 }
+#skills {
+  padding: 40px 0;
+  background: #f0f4f8;
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.skills-badges span {
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(55,48,163,0.06);
+  transition: background 0.2s;
+}
+
+.skills-badges span:hover {
+  background: #c7d2fe;
+}
