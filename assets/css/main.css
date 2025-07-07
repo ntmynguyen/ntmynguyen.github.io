@@ -5150,16 +5150,32 @@ a img {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-  padding: 2rem;
+  padding: 0; /* Padding moved to .card-content */
   transition: transform 0.15s, box-shadow 0.15s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
 }
 
-.publication-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.card-content > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.publication-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-left: 1rem;
 }
 
 .publication-card h3 {
@@ -5185,4 +5201,20 @@ a img {
 .publication-card a:hover {
   color: #1d4ed8;
   border-bottom: 2px solid #2563eb;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .publication-thumb {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
 }
