@@ -593,3 +593,7 @@ template {
         max-width: 250px;
     }
 }
+
+.text-center {
+  text-align: center;
+}
