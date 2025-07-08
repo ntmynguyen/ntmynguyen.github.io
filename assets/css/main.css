@@ -217,8 +217,8 @@ template {
 }
 
 /*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ * Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @-webkit-keyframes fa-spin {
     0% {
@@ -5027,10 +5027,10 @@ a img {
 }
 
 .user-projects {
-  margin: 20px auto;
-  border: 1px solid #000; /* This adds the 1px solid black border */
-  padding: 1.5rem;          /* This adds space inside the box */
-  border-radius: 8px;       /* This rounds the corners of the box */
+    margin: 20px auto;
+    border: 1px solid #000;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 .user-projects img {
@@ -5053,33 +5053,37 @@ a img {
 }
 
 @media only screen and (min-width:550px) {
+    .user-projects {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
     .contents {
         margin-left: 0;
-        width: 48%
+        width: 48%;
     }
 
     .contents,
     .contents-right {
-        margin-top: -5%
+        margin-top: 0;
     }
 
     .contents-right,
     .images-right {
-        float: right;
-        width: 48%
+        width: 48%;
     }
 
     .images-right img {
-        float: right
+        float: right;
     }
 
     .images-left {
-        float: left;
-        width: 48%
+        width: 48%;
     }
 
     .images-left img {
-        float: left
+        float: left;
     }
 }
 
@@ -5331,4 +5335,3 @@ a img {
     height: 140px;
   }
 }
-
