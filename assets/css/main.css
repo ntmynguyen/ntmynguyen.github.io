@@ -358,75 +358,96 @@ template {
 }
 
 #publication {
-    padding: 40px 0;
-    background: #faf9f6;
+  padding: 40px 0;
+  background: #faf9f6;
 }
 
 #publication h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 .publications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .publication-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-    padding: 0;
-    transition: transform 0.15s, box-shadow 0.15s;
-    display: block;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  padding: 0; /* Padding moved to .card-content */
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: block;
 }
 
 .card-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
 .card-content > div {
-    flex: 1 1 0;
-    min-width: 0;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .publication-thumb {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    margin-left: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-left: 1rem;
 }
 
 .publication-card h3 {
-    margin: 0 0 0.5em 0;
-    font-size: 1.25rem;
+  margin: 0 0 0.5em 0;
+  font-size: 1.25rem;
 }
 
 .publication-card p {
-    margin: 0.5em 0;
-    color: #555;
+  margin: 0.5em 0;
+  color: #555;
 }
 
 .publication-card a {
-    align-self: flex-start;
-    margin-top: 1.5em;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 600;
-    border-bottom: 2px solid #c7d2fe;
-    transition: color 0.2s;
+  align-self: flex-start;
+  margin-top: 1.5em;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  border-bottom: 2px solid #c7d2fe;
+  transition: color 0.2s;
+}
+
+.publication-card a:hover {
+  color: #1d4ed8;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .publication-thumb {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
 }
 
 #skills {
