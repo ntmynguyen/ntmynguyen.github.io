@@ -4889,10 +4889,16 @@ a img {
 }
 
 .header-links .link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 5px; /* Adjusted margin slightly for better spacing */
+
+  /* New button styles */
+  border: 2px solid #fff; /* The 2px solid white border */
+  padding: 8px 16px;       /* Adds space inside the button */
+  border-radius: 25px;     /* Creates the rounded, "pill" shape */
+  transition: all 0.3s ease; /* Makes the hover effect smooth */
 }
 
 @media only screen and (min-width:550px) {
