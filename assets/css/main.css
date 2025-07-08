@@ -5027,7 +5027,10 @@ a img {
 }
 
 .user-projects {
-    margin: 20px auto
+  margin: 20px auto;
+  border: 1px solid #000; /* This adds the 1px solid black border */
+  padding: 1.5rem;          /* This adds space inside the box */
+  border-radius: 8px;       /* This rounds the corners of the box */
 }
 
 .user-projects img {
