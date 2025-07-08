@@ -5253,66 +5253,78 @@ a img {
 #hay
 #awards {
   padding: 40px 0 60px 0;
-  background: #fffbea;
+  background: #fff;
 }
 
 #awards h2 {
   text-align: center;
-  color: #b45309;
+  color: #18181b;
   font-size: 2rem;
   margin-bottom: 2.2rem;
+  letter-spacing: 1px;
 }
 
 .award-block {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 2.5rem auto;
-  background: #fef3c7;
+  background: #f7f7f7;
   border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(251,191,36,0.10);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
 
 .award-block h3 {
   text-align: center;
-  color: #a16207;
+  color: #18181b;
   margin-bottom: 1.3rem;
   font-size: 1.25rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .award-images {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 1.6rem;
-  flex-wrap: wrap;
+  gap: 2rem;
+  flex-wrap: nowrap;       /* Always one row */
+  overflow-x: auto;        /* Scroll if overflow */
+  padding-bottom: 8px;     /* For visible scrollbar on small screens */
 }
 
 .award-images img {
-  width: 230px;
-  height: 160px;
+  width: 340px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(251,191,36,0.14);
-  background: #fffde9;
-  border: 2px solid #fde68a;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #fff;
+  border: 2px solid #e5e7eb;
   transition: transform 0.18s, box-shadow 0.18s;
+  flex-shrink: 0;         /* Don't shrink, keep size */
 }
 
 .award-images img:hover {
   transform: scale(1.06) rotate(-2deg);
-  box-shadow: 0 8px 24px rgba(251,191,36,0.22);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
-@media (max-width: 700px) {
-  .award-images {
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: center;
-  }
+/* Smaller images for tablets */
+@media (max-width: 1100px) {
   .award-images img {
-    width: 96vw;
-    max-width: 420px;
-    height: auto;
+    width: 260px;
+    height: 180px;
   }
 }
-#
+
+/* Even smaller images for mobile, keep one row and allow scroll */
+@media (max-width: 700px) {
+  .award-images {
+    gap: 1rem;
+    padding-bottom: 8px;
+  }
+  .award-images img {
+    width: 210px;
+    height: 140px;
+  }
+}
