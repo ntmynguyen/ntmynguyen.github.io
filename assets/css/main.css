@@ -4901,6 +4901,13 @@ a img {
   transition: all 0.3s ease; /* Makes the hover effect smooth */
 }
 
+.header-links .link:hover {
+  background-color: #fff; /* Fills the button with white on hover */
+  color: #1488CC;          /* Changes the text color to blue on hover */
+  transform: translateY(-3px); /* Lifts the button up by 3 pixels */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
 @media only screen and (min-width:550px) {
     .header-links .link {
         font-size: 20px
