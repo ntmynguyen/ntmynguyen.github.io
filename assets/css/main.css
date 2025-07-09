@@ -387,11 +387,12 @@ template {
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column; /* Changed to column */
-  align-items: center;    /* This will now center items horizontally */
-  padding: 2rem;
-  gap: 1rem;          /* Adjusted gap for vertical stacking */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
 .card-content > div {
@@ -400,18 +401,17 @@ template {
 }
 
 .publication-thumb {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  margin-bottom: 1rem; /* Changed margin for spacing below */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-left: 1rem;
 }
 
 .publication-card h3 {
-  margin: 0 0 0.5em 0;
-  font-size: 1.25rem;
-  text-align: center; /* Added to center the title */
+  margin: 0 0 0.5em 0;
+  font-size: 1.25rem;
 }
 
 .publication-card p {
